@@ -186,6 +186,9 @@ export default class MultiSlider extends React.Component {
       return;
     }
 
+    if(this.props.onToggleOne)
+      this.props.onToggleOne()  
+    
     const accumDistance = this.props.vertical
       ? -gestureState.dy
       : gestureState.dx;
@@ -258,6 +261,9 @@ export default class MultiSlider extends React.Component {
     if (!this.props.enabledTwo) {
       return;
     }
+    
+    if(this.props.onToggleTwo)
+      this.props.onToggleTwo()  
 
     const accumDistance = this.props.vertical
       ? -gestureState.dy
